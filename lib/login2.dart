@@ -8,6 +8,7 @@ class login2 extends StatelessWidget {
     final tinggi = MediaQuery.of(context).size.height;
     final lebar = MediaQuery.of(context).size.width;
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: Color(0xFFECC80A),
         body: Center(
           child: Column(
