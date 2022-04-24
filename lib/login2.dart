@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:nyoba/home.dart';
 
 class login2 extends StatefulWidget {
   const login2({Key? key}) : super(key: key);
@@ -115,7 +116,12 @@ class _login2State extends State<login2> {
                     width: lebar * 0.4,
                     height: tinggi * 0.08,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) {
+                          return home();
+                        }));
+                      },
                       child: Text("Log-In"),
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
