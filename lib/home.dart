@@ -52,6 +52,27 @@ class _homeState extends State<home> {
           )
         ],
       ),
+      bottomNavigationBar: Container(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          children: [
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.home,
+                  color: Colors.black,
+                )),
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.shopping_bag,
+                )),
+            IconButton(
+                onPressed: () {}, icon: const Icon(Icons.favorite_outline)),
+            IconButton(onPressed: () {}, icon: const Icon(Icons.person))
+          ],
+        ),
+      ),
     );
   }
 }

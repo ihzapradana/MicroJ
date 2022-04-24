@@ -61,7 +61,7 @@ flutter:
   assets:
     - assets/images/logo.png
     - assets/images/bhome.jpeg
-    - assets/images/kerajinan.jpeg
+    - assets/images/kerjinan.jpeg
     - assets/images/olahan.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see
