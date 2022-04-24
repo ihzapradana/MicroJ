@@ -31,25 +31,36 @@ class _homeState extends State<home> {
       body: Column(
         children: [
           Container(
-            width: lebar * 0.8,
-            height: tinggi * 0.2,
+            // width: lebar * 0.8,
+            // height: tinggi * 0.2,
             child: Image(image: AssetImage("assets/images/bhome.jpeg")),
           ),
           Container(
+            color: Color.fromARGB(255, 218, 218, 218),
+            alignment: Alignment.topLeft,
             child: Text("Shop By Categories"),
           ),
-          Row(
-            children: [
-              Card(
-                child: GridView.count(
-                  crossAxisCount: 2,
-                  children: [
-                    Image(image: AssetImage("assets/images/kerjainan.jpeg")),
-                  ],
-                ),
-              )
-            ],
-          )
+          // Container(
+          //   color: Colors.grey,
+          //   alignment: Alignment.topLeft,
+          //   child: Image(image: AssetImage("assets/images/kerjinan.jpeg")),
+          // ),
+          // Container(
+          //   alignment: Alignment.topRight,
+          //   child: Image(image: AssetImage("assets/images/olahan.jpeg")),
+          // ),
+          // Row(
+          //   children: [
+          //     Card(
+          //       child: GridView.count(
+          //         crossAxisCount: 2,
+          //         children: [
+          //           Image(image: AssetImage("assets/images/kerjinan.jpeg")),
+          //         ],
+          //       ),
+          //     )
+          //   ],
+          // )
         ],
       ),
       bottomNavigationBar: Container(
