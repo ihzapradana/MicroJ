@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:nyoba/Keranjang_page.dart';
 import 'package:nyoba/home.dart';
+import 'package:nyoba/favorite_page.dart';
 
 class BottomNav extends StatefulWidget {
   const BottomNav({Key? key}) : super(key: key);
@@ -11,10 +12,7 @@ class BottomNav extends StatefulWidget {
 
 class _BottomNavState extends State<BottomNav> {
   int currentIndex = 0;
-  final List<Widget> body = [
-    const home(),
-    keranjang(),
-  ];
+  final List<Widget> body = [const home(), keranjang(), favorite()];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +28,7 @@ class _BottomNavState extends State<BottomNav> {
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.shopping_bag),
-            label: 'Shopping bag',
+            label: 'Keranjang',
             backgroundColor: Color(0xFFECC80A),
           ),
           BottomNavigationBarItem(
