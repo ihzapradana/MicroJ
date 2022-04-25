@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
 class signin extends StatelessWidget {
-  const signin({ Key? key }) : super(key: key);
+  const signin({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -14,23 +15,27 @@ class signin extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Container(
-              width: lebar*0.4, height: tinggi*0.4, padding: EdgeInsets.all(5),
+              width: lebar * 0.4,
+              height: tinggi * 0.4,
+              padding: EdgeInsets.all(5),
               child: Image(image: AssetImage("assets/images/logo.png")),
-              
             ),
             Container(
               width: double.infinity,
               margin: EdgeInsets.fromLTRB(10, 0, 20, 0),
-              height: tinggi*0.55,
-              decoration: BoxDecoration(color: Color.fromARGB(255, 197, 197, 197),borderRadius: BorderRadius.all(Radius.circular(8))),
+              height: tinggi * 0.55,
+              decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 197, 197, 197),
+                  borderRadius: BorderRadius.all(Radius.circular(8))),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: lebar*0.7,
+                    width: lebar * 0.7,
                     child: TextField(
                       decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         enabledBorder: OutlineInputBorder(
@@ -43,12 +48,15 @@ class signin extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: tinggi*0.02,),
+                  SizedBox(
+                    height: tinggi * 0.02,
+                  ),
                   Container(
-                    width: lebar*0.7,
+                    width: lebar * 0.7,
                     child: TextField(
                       decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         enabledBorder: OutlineInputBorder(
@@ -61,12 +69,15 @@ class signin extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: tinggi*0.02,),
+                  SizedBox(
+                    height: tinggi * 0.02,
+                  ),
                   Container(
-                    width: lebar*0.7,
+                    width: lebar * 0.7,
                     child: TextField(
                       decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         enabledBorder: OutlineInputBorder(
@@ -79,12 +90,15 @@ class signin extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: tinggi*0.02,),
+                  SizedBox(
+                    height: tinggi * 0.02,
+                  ),
                   Container(
-                    width: lebar*0.7,
+                    width: lebar * 0.7,
                     child: TextField(
                       decoration: InputDecoration(
-                        focusedBorder: OutlineInputBorder(borderSide: BorderSide(color: Colors.white),
+                        focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white),
                           borderRadius: BorderRadius.circular(8),
                         ),
                         enabledBorder: OutlineInputBorder(
@@ -97,18 +111,31 @@ class signin extends StatelessWidget {
                       ),
                     ),
                   ),
-                  SizedBox(height: tinggi*0.02,),
                   Container(
-                    width: lebar*0.4, height: tinggi*0.08,
-                    child: ElevatedButton(onPressed: () {
-                    },
-                    child: Text("Sign-Up"),
-                    style: ElevatedButton.styleFrom(
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
-                      ),
-                    primary: Color(0xFFD16706)
-                    ),),
+                    width: lebar * 0.7,
+                    child: OutlinedButton(
+                        onPressed: () {
+                          showDatePicker(
+                            context: context,
+                            initialDate: DateTime.now(),
+                            firstDate: DateTime(1920),
+                            lastDate: DateTime(2025),
+                          );
+                        },
+                        child: Text("Pilih Tanggal Lahir")),
+                  ),
+                  Container(
+                    width: lebar * 0.4,
+                    height: tinggi * 0.08,
+                    child: ElevatedButton(
+                      onPressed: () {},
+                      child: Text("Sign-Up"),
+                      style: ElevatedButton.styleFrom(
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(8),
+                          ),
+                          primary: Color(0xFFD16706)),
+                    ),
                   ),
                 ],
               ),
