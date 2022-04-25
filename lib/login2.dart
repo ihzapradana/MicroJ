@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:nyoba/BottomNavBar.dart';
 import 'package:nyoba/home.dart';
 
 class login2 extends StatefulWidget {
@@ -179,7 +180,7 @@ class _login2State extends State<login2> {
             onPressed: () {
               Navigator.pushReplacement(context,
                   MaterialPageRoute(builder: (context) {
-                return home();
+                return BottomNav();
               }));
             })
       ],

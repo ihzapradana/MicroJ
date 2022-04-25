@@ -50,35 +50,35 @@ class _homeState extends State<home> {
           )
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        backgroundColor: Color(0xFFECC80A),
-        selectedItemColor: Colors.black,
-        unselectedItemColor: Color.fromARGB(255, 66, 66, 66),
-        showUnselectedLabels: false,
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: 'home',
-            backgroundColor: Color(0xFFECC80A),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.shopping_bag),
-            label: 'Shopping bag',
-            backgroundColor: Color(0xFFECC80A),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.favorite_outline),
-            label: 'favorite',
-            backgroundColor: Color(0xFFECC80A),
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-            backgroundColor: Color(0xFFECC80A),
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   type: BottomNavigationBarType.fixed,
+      //   backgroundColor: Color(0xFFECC80A),
+      //   selectedItemColor: Colors.black,
+      //   unselectedItemColor: Color.fromARGB(255, 66, 66, 66),
+      //   showUnselectedLabels: false,
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.home),
+      //       label: 'home',
+      //       backgroundColor: Color(0xFFECC80A),
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.shopping_bag),
+      //       label: 'Shopping bag',
+      //       backgroundColor: Color(0xFFECC80A),
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.favorite_outline),
+      //       label: 'favorite',
+      //       backgroundColor: Color(0xFFECC80A),
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.person),
+      //       label: 'Profile',
+      //       backgroundColor: Color(0xFFECC80A),
+      //     ),
+      //   ],
+      // ),
       // bottomNavigationBar: Container(
       //   child: Row(
       //     mainAxisAlignment: MainAxisAlignment.spaceAround,
