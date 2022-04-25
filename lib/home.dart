@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:getwidget/getwidget.dart';
 
 class home extends StatefulWidget {
   const home({Key? key}) : super(key: key);
@@ -40,33 +41,13 @@ class _homeState extends State<home> {
             alignment: Alignment.topLeft,
             child: Text("Shop By Categories"),
           ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              color: Colors.grey,
-              alignment: Alignment.topLeft,
-              child: Image(image: AssetImage("assets/images/kerjinan.jpeg")),
+          GFCard(
+            boxFit: BoxFit.cover,
+            imageOverlay: AssetImage("assets/images/kerjinan.jpeg"),
+            title: GFListTile(
+              title: Text("try"),
             ),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Container(
-              alignment: Alignment.topRight,
-              child: Image(image: AssetImage("assets/images/olahan.jpeg")),
-            ),
-          ),
-          // Row(
-          //   children: [
-          //     Card(
-          //       child: GridView.count(
-          //         crossAxisCount: 2,
-          //         children: [
-          //           Image(image: AssetImage("assets/images/kerjinan.jpeg")),
-          //         ],
-          //       ),
-          //     )
-          //   ],
-          // )
+          )
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
