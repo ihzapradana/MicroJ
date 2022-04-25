@@ -4,13 +4,18 @@ import 'package:flutter/material.dart';
 import 'package:nyoba/home.dart';
 
 class login2 extends StatefulWidget {
-  const login2({Key? key}) : super(key: key);
+  login2({Key? key}) : super(key: key);
+
+  // TextEditingController _emailController = TextEditingController();
+  // TextEditingController _passwordController = TextEditingController();
 
   @override
   State<login2> createState() => _login2State();
 }
 
 class _login2State extends State<login2> {
+  TextEditingController _emailController = TextEditingController();
+  TextEditingController _passwordController = TextEditingController();
   bool showValue = true;
 
   @override
@@ -48,6 +53,8 @@ class _login2State extends State<login2> {
                   Container(
                     width: lebar * 0.7,
                     child: TextField(
+                      controller: _emailController,
+                      keyboardType: TextInputType.emailAddress,
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
@@ -69,6 +76,8 @@ class _login2State extends State<login2> {
                   Container(
                     width: lebar * 0.7,
                     child: TextField(
+                      controller: _passwordController,
+                      keyboardType: TextInputType.visiblePassword,
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
@@ -116,12 +125,16 @@ class _login2State extends State<login2> {
                     width: lebar * 0.4,
                     height: tinggi * 0.08,
                     child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return home();
-                        }));
-                      },
+                      onPressed: () => submit(
+                        context,
+                        _emailController.text,
+                        _passwordController.text,
+                      ),
+                      // Navigator.push(context,
+                      //     MaterialPageRoute(builder: (context) {
+                      //   return home();
+                      // }));
+                      // },
                       child: Text("Log-In"),
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
@@ -141,6 +154,38 @@ class _login2State extends State<login2> {
         ),
       ),
     );
+  }
+
+  void submit(BuildContext context, String email, String password) {
+    if (email.isEmpty || password.isEmpty) {
+      final snackBar = SnackBar(
+        duration: const Duration(seconds: 5),
+        content: Text("Email dan Password harus diisi"),
+        backgroundColor: Colors.red,
+      );
+
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      return;
+    }
+
+    AlertDialog alert = AlertDialog(
+      title: Text("Login Berhasil"),
+      content: Container(
+        child: Text("Selamat Anda Berhasil Login"),
+      ),
+      actions: [
+        TextButton(
+            child: Text("Ok"),
+            onPressed: () {
+              Navigator.pushReplacement(context,
+                  MaterialPageRoute(builder: (context) {
+                return home();
+              }));
+            })
+      ],
+    );
+
+    showDialog(context: context, builder: (context) => alert);
   }
 }
 
@@ -270,4 +315,4 @@ class _login2State extends State<login2> {
 //   }
 
 //   void setState(Null Function() param0) {}
-// }
+// };
