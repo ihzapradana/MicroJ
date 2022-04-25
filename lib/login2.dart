@@ -7,9 +7,6 @@ import 'package:nyoba/home.dart';
 class login2 extends StatefulWidget {
   login2({Key? key}) : super(key: key);
 
-  // TextEditingController _emailController = TextEditingController();
-  // TextEditingController _passwordController = TextEditingController();
-
   @override
   State<login2> createState() => _login2State();
 }
