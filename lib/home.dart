@@ -40,15 +40,21 @@ class _homeState extends State<home> {
             alignment: Alignment.topLeft,
             child: Text("Shop By Categories"),
           ),
-          // Container(
-          //   color: Colors.grey,
-          //   alignment: Alignment.topLeft,
-          //   child: Image(image: AssetImage("assets/images/kerjinan.jpeg")),
-          // ),
-          // Container(
-          //   alignment: Alignment.topRight,
-          //   child: Image(image: AssetImage("assets/images/olahan.jpeg")),
-          // ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              color: Colors.grey,
+              alignment: Alignment.topLeft,
+              child: Image(image: AssetImage("assets/images/kerjinan.jpeg")),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              alignment: Alignment.topRight,
+              child: Image(image: AssetImage("assets/images/olahan.jpeg")),
+            ),
+          ),
           // Row(
           //   children: [
           //     Card(
@@ -63,27 +69,56 @@ class _homeState extends State<home> {
           // )
         ],
       ),
-      bottomNavigationBar: Container(
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: [
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.home,
-                  color: Colors.black,
-                )),
-            IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.shopping_bag,
-                )),
-            IconButton(
-                onPressed: () {}, icon: const Icon(Icons.favorite_outline)),
-            IconButton(onPressed: () {}, icon: const Icon(Icons.person))
-          ],
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed,
+        backgroundColor: Color(0xFFECC80A),
+        selectedItemColor: Colors.black,
+        unselectedItemColor: Color.fromARGB(255, 66, 66, 66),
+        showUnselectedLabels: false,
+        items: [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'home',
+            backgroundColor: Color(0xFFECC80A),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_bag),
+            label: 'Shopping bag',
+            backgroundColor: Color(0xFFECC80A),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite_outline),
+            label: 'favorite',
+            backgroundColor: Color(0xFFECC80A),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
+            backgroundColor: Color(0xFFECC80A),
+          ),
+        ],
       ),
+      // bottomNavigationBar: Container(
+      //   child: Row(
+      //     mainAxisAlignment: MainAxisAlignment.spaceAround,
+      //     children: [
+      //       IconButton(
+      //           onPressed: () {},
+      //           icon: const Icon(
+      //             Icons.home,
+      //             color: Colors.black,
+      //           )),
+      //       IconButton(
+      //           onPressed: () {},
+      //           icon: const Icon(
+      //             Icons.shopping_bag,
+      //           )),
+      //       IconButton(
+      //           onPressed: () {}, icon: const Icon(Icons.favorite_outline)),
+      //       IconButton(onPressed: () {}, icon: const Icon(Icons.person))
+      //     ],
+      //   ),
+      // ),
     );
   }
 }
