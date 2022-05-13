@@ -47,7 +47,23 @@ class _homeState extends State<home> {
             title: GFListTile(
               title: Text("try"),
             ),
-          )
+          ),
+          // Container(
+          //   decoration: BoxDecoration(
+          //     image: DecorationImage(image: AssetImage("assets/images/olahan.jpeg"),
+          //     fit: BoxFit.cover),
+          //   ),
+          //   child: Card(
+          //     child: InkWell(
+          //       splashColor: Color(0xFFECC80A),
+          //       onTap: () {
+          //         debugPrint('card tapped');
+          //       },
+          //       child: Text("Olahan")
+
+          //     )
+          //   ),
+          // ),
         ],
       ),
       // bottomNavigationBar: BottomNavigationBar(
