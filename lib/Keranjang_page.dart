@@ -23,6 +23,9 @@ class _keranjangState extends State<keranjang> {
           )
         ],
       ),
+      body: Column(
+        children: [],
+      ),
     );
   }
 }
