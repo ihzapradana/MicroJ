@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:nyoba/ulasan.dart';
 
 class home extends StatefulWidget {
   const home({Key? key}) : super(key: key);
@@ -41,29 +42,28 @@ class _homeState extends State<home> {
             alignment: Alignment.topLeft,
             child: Text("Shop By Categories"),
           ),
-          GFCard(
-            boxFit: BoxFit.cover,
-            imageOverlay: AssetImage("assets/images/kerjinan.jpeg"),
-            title: GFListTile(
-              title: Text("try"),
-            ),
-          ),
-          // Container(
-          //   decoration: BoxDecoration(
-          //     image: DecorationImage(image: AssetImage("assets/images/olahan.jpeg"),
-          //     fit: BoxFit.cover),
-          //   ),
-          //   child: Card(
-          //     child: InkWell(
-          //       splashColor: Color(0xFFECC80A),
-          //       onTap: () {
-          //         debugPrint('card tapped');
-          //       },
-          //       child: Text("Olahan")
-
-          //     )
+          // GFCard(
+          //   boxFit: BoxFit.cover,
+          //   imageOverlay: AssetImage("assets/images/kerjinan.jpeg"),
+          //   title: GFListTile(
+          //     title: Text("try"),
           //   ),
           // ),
+          Container(
+            decoration: BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/images/olahan.jpeg"),
+                  fit: BoxFit.cover),
+            ),
+            child: Card(
+                child: InkWell(
+                    splashColor: Color(0xFFECC80A),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Ulasan()));
+                    },
+                    child: Text("Olahan"))),
+          ),
         ],
       ),
       // bottomNavigationBar: BottomNavigationBar(
