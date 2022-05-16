@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
+import 'package:nyoba/mirun.dart';
 import 'package:nyoba/ulasan.dart';
 
 class home extends StatefulWidget {
@@ -64,6 +65,19 @@ class _homeState extends State<home> {
                     },
                     child: Text("Olahan"))),
           ),
+          SizedBox(
+            height: tinggi * 0.02,
+          ),
+          Container(
+            child: Card(
+                child: InkWell(
+                    splashColor: Color(0xFFECC80A),
+                    onTap: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => mirun()));
+                    },
+                    child: Text("MiRun"))),
+          )
         ],
       ),
       // bottomNavigationBar: BottomNavigationBar(

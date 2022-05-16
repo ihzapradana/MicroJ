@@ -23,7 +23,7 @@ class signin extends StatelessWidget {
             Container(
               width: double.infinity,
               margin: EdgeInsets.fromLTRB(10, 0, 20, 0),
-              height: tinggi * 0.55,
+              height: tinggi * 0.6,
               decoration: BoxDecoration(
                   color: Color.fromARGB(255, 197, 197, 197),
                   borderRadius: BorderRadius.all(Radius.circular(8))),
@@ -31,7 +31,7 @@ class signin extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    width: lebar * 0.7,
+                    width: lebar * 0.6,
                     child: TextField(
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
@@ -52,7 +52,7 @@ class signin extends StatelessWidget {
                     height: tinggi * 0.02,
                   ),
                   Container(
-                    width: lebar * 0.7,
+                    width: lebar * 0.6,
                     child: TextField(
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
@@ -73,7 +73,7 @@ class signin extends StatelessWidget {
                     height: tinggi * 0.02,
                   ),
                   Container(
-                    width: lebar * 0.7,
+                    width: lebar * 0.6,
                     child: TextField(
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
@@ -94,7 +94,7 @@ class signin extends StatelessWidget {
                     height: tinggi * 0.02,
                   ),
                   Container(
-                    width: lebar * 0.7,
+                    width: lebar * 0.6,
                     child: TextField(
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
@@ -112,7 +112,7 @@ class signin extends StatelessWidget {
                     ),
                   ),
                   Container(
-                    width: lebar * 0.7,
+                    width: lebar * 0.6,
                     child: OutlinedButton(
                         onPressed: () {
                           showDatePicker(
@@ -126,13 +126,13 @@ class signin extends StatelessWidget {
                   ),
                   Container(
                     width: lebar * 0.4,
-                    height: tinggi * 0.08,
+                    height: tinggi * 0.07,
                     child: ElevatedButton(
                       onPressed: () {},
                       child: Text("Sign-Up"),
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
-                            borderRadius: BorderRadius.circular(8),
+                            borderRadius: BorderRadius.circular(10),
                           ),
                           primary: Color(0xFFD16706)),
                     ),
