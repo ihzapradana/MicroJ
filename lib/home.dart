@@ -51,14 +51,21 @@ class _homeState extends State<home> {
           //   ),
           // ),
           Container(
+            height: tinggi * 0.1,
+            width: lebar * 0.3,
             decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage("assets/images/olahan.jpeg"),
                   fit: BoxFit.cover),
             ),
             child: Card(
+                // color: Colors.transparent,
+                // shape: RoundedRectangleBorder(
+                //     borderRadius: BorderRadius.circular(15)),
+                // shadowColor: Colors.transparent,
+                // child: Text("tes"),
                 child: InkWell(
-                    splashColor: Color(0xFFECC80A),
+                    splashColor: Colors.transparent,
                     onTap: () {
                       Navigator.push(context,
                           MaterialPageRoute(builder: (context) => Ulasan()));
