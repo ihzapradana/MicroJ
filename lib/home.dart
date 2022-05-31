@@ -31,61 +31,110 @@ class _homeState extends State<home> {
           )
         ],
       ),
-      body: Column(
-        children: [
-          Container(
-            // width: lebar * 0.8,
-            // height: tinggi * 0.2,
-            child: Image(image: AssetImage("assets/images/bhome.jpeg")),
-          ),
-          Container(
-            color: Color.fromARGB(255, 218, 218, 218),
-            alignment: Alignment.topLeft,
-            child: Text("Shop By Categories"),
-          ),
-          // GFCard(
-          //   boxFit: BoxFit.cover,
-          //   imageOverlay: AssetImage("assets/images/kerjinan.jpeg"),
-          //   title: GFListTile(
-          //     title: Text("try"),
-          //   ),
-          // ),
-          Container(
-            height: tinggi * 0.1,
-            width: lebar * 0.3,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                  image: AssetImage("assets/images/olahan.jpeg"),
-                  fit: BoxFit.cover),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              // width: lebar * 0.8,
+              // height: tinggi * 0.2,
+              child: Image(image: AssetImage("assets/images/bhome.jpeg")),
             ),
-            child: Card(
-                // color: Colors.transparent,
-                // shape: RoundedRectangleBorder(
-                //     borderRadius: BorderRadius.circular(15)),
-                // shadowColor: Colors.transparent,
-                // child: Text("tes"),
-                child: InkWell(
-                    splashColor: Colors.transparent,
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => Ulasan()));
-                    },
-                    child: Text("Olahan"))),
-          ),
-          SizedBox(
-            height: tinggi * 0.02,
-          ),
-          Container(
-            child: Card(
-                child: InkWell(
-                    splashColor: Color(0xFFECC80A),
-                    onTap: () {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => mirun()));
-                    },
-                    child: Text("MiRun"))),
-          )
-        ],
+            Container(
+              color: Color.fromARGB(255, 218, 218, 218),
+              alignment: Alignment.topLeft,
+              child: Text("Shop By Categories"),
+            ),
+            // GFCard(
+            //   boxFit: BoxFit.cover,
+            //   imageOverlay: AssetImage("assets/images/kerjinan.jpeg"),
+            //   title: GFListTile(
+            //     title: Text("try"),
+            //   ),
+            // ),
+            Container(
+              width: lebar,
+              margin: EdgeInsets.only(top: 35),
+              child: Row(
+                children: [
+                  Container(
+                      width: lebar * 0.4,
+                      color: Color(0xFFE7E6E6),
+                      margin: EdgeInsets.only(left: lebar * 0.05),
+                      child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => mirun()));
+                          },
+                          child: Column(
+                            children: [
+                              Image(
+                                  image: AssetImage(
+                                      "assets/images/kerjinan.jpeg")),
+                              Text("kerajinan")
+                            ],
+                          ))),
+                  Container(
+                      width: lebar * 0.4,
+                      color: Color(0xFFE7E6E6),
+                      margin: EdgeInsets.only(left: lebar * 0.05),
+                      child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Ulasan()));
+                          },
+                          child: Column(
+                            children: [
+                              Image(
+                                  image:
+                                      AssetImage("assets/images/olahan.jpeg")),
+                              Text("Olahan Makanan")
+                            ],
+                          ))),
+                ],
+              ),
+            ),
+            // Container(
+            //   height: tinggi * 0.1,
+            //   width: lebar * 0.3,
+            //   alignment: Alignment.bottomCenter,
+            //   decoration: BoxDecoration(
+            //     image: DecorationImage(
+            //         image: AssetImage("assets/images/olahan.jpeg"),
+            //         fit: BoxFit.cover),
+            //   ),
+            //   child: Card(
+            //       // color: Colors.transparent,
+            //       // shape: RoundedRectangleBorder(
+            //       //     borderRadius: BorderRadius.circular(15)),
+            //       // shadowColor: Colors.transparent,
+            //       // child: Text("tes"),
+            //       child: InkWell(
+            //           splashColor: Colors.transparent,
+            //           onTap: () {
+            //             Navigator.push(context,
+            //                 MaterialPageRoute(builder: (context) => Ulasan()));
+            //           },
+            //           child: Text("Olahan"))),
+            // ),
+            SizedBox(
+              height: tinggi * 0.02,
+            ),
+            Container(
+              child: Card(
+                  child: InkWell(
+                      splashColor: Color(0xFFECC80A),
+                      onTap: () {
+                        Navigator.push(context,
+                            MaterialPageRoute(builder: (context) => mirun()));
+                      },
+                      child: Text("MiRun"))),
+            )
+          ],
+        ),
       ),
       // bottomNavigationBar: BottomNavigationBar(
       //   type: BottomNavigationBarType.fixed,
