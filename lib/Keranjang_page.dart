@@ -23,12 +23,7 @@ class _keranjangState extends State<keranjang> {
         child: Column(
           children: [
             Container(
-              width: double.infinity,
-              margin: EdgeInsets.fromLTRB(15, 30, 15, 30),
-              height: tinggi * 0.55,
-              decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 197, 197, 197),
-                  borderRadius: BorderRadius.all(Radius.circular(5))),
+              child: Image(image: AssetImage("assets/images/pecel.png")),
             )
           ],
         ),

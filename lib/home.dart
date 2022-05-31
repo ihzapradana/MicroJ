@@ -97,6 +97,52 @@ class _homeState extends State<home> {
                 ],
               ),
             ),
+            Container(
+              width: lebar,
+              margin: EdgeInsets.only(top: 35),
+              child: Row(
+                children: [
+                  Container(
+                      width: lebar * 0.4,
+                      color: Color(0xFFE7E6E6),
+                      margin: EdgeInsets.only(left: lebar * 0.05),
+                      child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => mirun()));
+                          },
+                          child: Column(
+                            children: [
+                              Image(
+                                  image: AssetImage(
+                                      "assets/images/kerjinan.jpeg")),
+                              Text("accessories")
+                            ],
+                          ))),
+                  Container(
+                      width: lebar * 0.4,
+                      color: Color(0xFFE7E6E6),
+                      margin: EdgeInsets.only(left: lebar * 0.05),
+                      child: InkWell(
+                          onTap: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => Ulasan()));
+                          },
+                          child: Column(
+                            children: [
+                              Image(
+                                  image:
+                                      AssetImage("assets/images/olahan.jpeg")),
+                              Text("Kebutuhan Pokok")
+                            ],
+                          ))),
+                ],
+              ),
+            ),
             // Container(
             //   height: tinggi * 0.1,
             //   width: lebar * 0.3,
