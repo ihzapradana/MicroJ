@@ -65,7 +65,7 @@ class _homeState extends State<home> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => mirun()));
+                                    builder: (context) => Ulasan()));
                           },
                           child: Column(
                             children: [
