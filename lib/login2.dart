@@ -95,7 +95,7 @@ class _login2State extends State<login2> {
                     height: tinggi * 0.02,
                   ),
                   Container(
-                    padding: EdgeInsets.only(right: 0, left: 53),
+                    padding: EdgeInsets.only(right: 0, left: 35),
                     child: Row(
                       children: [
                         Checkbox(
