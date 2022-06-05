@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "94796826491",
+    "project_id": "microj-e1607",
+    "storage_bucket": "microj-e1607.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:94796826491:android:f60d454a11a04500e99fde",
+        "android_client_info": {
+          "package_name": "com.example.nyoba"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "94796826491-kf61rbum6mrt0m7qqgvgcm3m8r4vgce2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAoxg-2KCloLz5KiRYjCqlpg5eFz4vzX2k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "94796826491-kf61rbum6mrt0m7qqgvgcm3m8r4vgce2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

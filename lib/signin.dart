@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
-class signin extends StatelessWidget {
+class signin extends StatefulWidget {
   const signin({Key? key}) : super(key: key);
 
   @override
@@ -144,5 +146,11 @@ class signin extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  @override
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    throw UnimplementedError();
   }
 }
