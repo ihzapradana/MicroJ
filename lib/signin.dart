@@ -6,6 +6,14 @@ class signin extends StatefulWidget {
   const signin({Key? key}) : super(key: key);
 
   @override
+  State<signin> createState() => _signinState();
+}
+
+class _signinState extends State<signin> {
+  final emaiController = TextEditingController();
+  final passwordController = TextEditingController();
+
+  @override
   Widget build(BuildContext context) {
     final tinggi = MediaQuery.of(context).size.height;
     final lebar = MediaQuery.of(context).size.width;
@@ -56,6 +64,7 @@ class signin extends StatefulWidget {
                   Container(
                     width: lebar * 0.6,
                     child: TextField(
+                      controller: emaiController,
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
@@ -77,6 +86,7 @@ class signin extends StatefulWidget {
                   Container(
                     width: lebar * 0.6,
                     child: TextField(
+                      controller: passwordController,
                       decoration: InputDecoration(
                         focusedBorder: OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.white),
@@ -130,7 +140,7 @@ class signin extends StatefulWidget {
                     width: lebar * 0.4,
                     height: tinggi * 0.07,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: signUp,
                       child: Text("Sign-Up"),
                       style: ElevatedButton.styleFrom(
                           shape: RoundedRectangleBorder(
@@ -148,9 +158,14 @@ class signin extends StatefulWidget {
     );
   }
 
-  @override
-  State<StatefulWidget> createState() {
-    // TODO: implement createState
-    throw UnimplementedError();
+  Future signUp() async {
+    try {
+      await FirebaseAuth.instance.createUserWithEmailAndPassword(
+        email: emaiController.text.trim(),
+        password: passwordController.text.trim(),
+      );
+    } on FirebaseAuthException catch (e) {
+      print(e);
+    }
   }
 }
