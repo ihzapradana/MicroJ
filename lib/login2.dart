@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:nyoba/BottomNavBar.dart';
 import 'package:nyoba/home.dart';
@@ -153,6 +154,13 @@ class _login2State extends State<login2> {
       ),
     );
   }
+
+  //  Future login() async {
+  //   await FirebaseAuth.instance.signInWithEmailAndPassword(
+  //     email: _emailController.text.trim(),
+  //     password: _passwordController.text.trim(),
+  //   );
+  // }
 
   void submit(BuildContext context, String email, String password) {
     if (email.isEmpty || password.isEmpty) {
