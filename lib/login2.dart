@@ -124,11 +124,8 @@ class _login2State extends State<login2> {
                     width: lebar * 0.4,
                     height: tinggi * 0.08,
                     child: ElevatedButton(
-                      onPressed: () => submit(
-                        context,
-                        _emailController.text,
-                        _passwordController.text,
-                      ),
+                      onPressed: () {
+                        dologin();},
                       // Navigator.push(context,
                       //     MaterialPageRoute(builder: (context) {
                       //   return home();
@@ -193,6 +190,33 @@ class _login2State extends State<login2> {
 
     showDialog(context: context, builder: (context) => alert);
   }
+  Future dologin() async {
+    try {
+      var email = _emailController.text;
+      var password = _passwordController.text;
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email:email,
+        password: password,
+      );
+       final snackBar = SnackBar(
+        duration: const Duration(seconds: 5),
+        content: Text("Berhasil Login"),
+        backgroundColor: Colors.green,
+      );
+
+      ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      Navigator.push(context, MaterialPageRoute(builder: (_) {
+        return BottomNav();
+      }));
+    } on FirebaseAuthException catch (e) {
+      print(e);
+    }
+    final snackBar = SnackBar(
+        duration: const Duration(seconds: 5),
+        content: Text("Email / Password Salah!"),
+        backgroundColor: Colors.red,);
+  ScaffoldMessenger.of(context).showSnackBar(snackBar);       
+}
 }
 
 // class login2 extends StatelessWidget {
