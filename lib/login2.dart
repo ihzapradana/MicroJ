@@ -152,12 +152,6 @@ class _login2State extends State<login2> {
     );
   }
 
-  //  Future login() async {
-  //   await FirebaseAuth.instance.signInWithEmailAndPassword(
-  //     email: _emailController.text.trim(),
-  //     password: _passwordController.text.trim(),
-  //   );
-  // }
 
   void submit(BuildContext context, String email, String password) {
     if (email.isEmpty || password.isEmpty) {
@@ -209,13 +203,13 @@ class _login2State extends State<login2> {
         return BottomNav();
       }));
     } on FirebaseAuthException catch (e) {
-      print(e);
-    }
-    final snackBar = SnackBar(
+      final snackBar = SnackBar(
         duration: const Duration(seconds: 5),
         content: Text("Email / Password Salah!"),
         backgroundColor: Colors.red,);
-  ScaffoldMessenger.of(context).showSnackBar(snackBar);       
+  ScaffoldMessenger.of(context).showSnackBar(snackBar);
+      print(e);
+    }       
 }
 }
 
