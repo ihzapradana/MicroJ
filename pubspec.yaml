@@ -69,7 +69,11 @@ flutter:
     - assets/images/bhome.jpeg
     - assets/images/kerjinan.jpeg
     - assets/images/olahan.jpeg
-
+    - assets/images/pecel.png
+    - assets/images/ayamBengek.jpeg
+    - assets/images/cookies.jpeg
+    - assets/images/miePedes.jpeg
+    - assets/images/tahuKocek.jpeg
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
 
