@@ -27,12 +27,13 @@ class _categoryState extends State<category> {
             'nama': e['nama'],
             'jarak': e['jarak'],
             'deskripsi': e['deskripsi'],
-            'gambar' : e['gambar']
+            'gambar': e['gambar']
           };
         }).toList();
       });
     });
   }
+
   @override
   Widget build(BuildContext context) {
     final tinggi = MediaQuery.of(context).size.height;
@@ -40,51 +41,58 @@ class _categoryState extends State<category> {
     return Scaffold(
       resizeToAvoidBottomInset: false,
       appBar: AppBar(
-        title: Text("Category Olahan Makanan", style: TextStyle(color: Colors.black),),
-        backgroundColor: Colors.white,
+        title: Text(
+          "Category Olahan Makanan",
+          style: TextStyle(color: Colors.black),
+        ),
+        backgroundColor: Color(0xFFECC80A),
       ),
       body: Column(
         children: [
           Expanded(
-              child: ListView.builder(
-                  itemCount: list_item.length,
-                  itemBuilder: (_, int index) {
-                    var item = list_item[index];
-                    return Container(
-                      
-            child: Row(
-              children: [
-                Container(
-                  width: lebar * 0.4,
-                  height: tinggi * 0.2,
-                  padding: EdgeInsets.all(3),
-                  child: ClipRRect(
-                    child: Image(image: AssetImage("assets/images/${item['gambar']}"),
-                  ),
-                )),
-                Container(
-                  margin: EdgeInsets.only(left: lebar * 0.05),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(item['nama'], style: TextStyle(fontWeight: FontWeight.bold),),
-                      SizedBox(
-                          height: tinggi * 0.02,
-                        ),
-                      Text(item['jarak']),
-                      SizedBox(
-                          height: tinggi * 0.02,
-                        ),
-                      Text(item['deskripsi'])
-                    ],
-                  ),
-                )
-              ],
-            ),
-          );
-                  }
-          ),
-      )],
+            child: ListView.builder(
+                itemCount: list_item.length,
+                itemBuilder: (_, int index) {
+                  var item = list_item[index];
+                  return Container(
+                    child: Row(
+                      children: [
+                        Container(
+                            width: lebar * 0.4,
+                            height: tinggi * 0.2,
+                            padding: EdgeInsets.all(3),
+                            child: ClipRRect(
+                              child: Image(
+                                image: AssetImage(
+                                    "assets/images/${item['gambar']}"),
+                              ),
+                            )),
+                        Container(
+                          margin: EdgeInsets.only(left: lebar * 0.05),
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                item['nama'],
+                                style: TextStyle(fontWeight: FontWeight.bold),
+                              ),
+                              SizedBox(
+                                height: tinggi * 0.02,
+                              ),
+                              Text(item['jarak']),
+                              SizedBox(
+                                height: tinggi * 0.02,
+                              ),
+                              Text(item['deskripsi'])
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
+                  );
+                }),
+          )
+        ],
       ),
     );
   }

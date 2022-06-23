@@ -35,9 +35,28 @@ class _UlasanState extends State<Ulasan> {
         child: Column(
           children: [
             Container(
+              width: lebar * 0.8,
+              // height: tinggi * 0.2,
+              child: TextField(
+                decoration: InputDecoration(
+                  focusedBorder: OutlineInputBorder(
+                    borderSide: BorderSide(color: Colors.white),
+                    borderRadius: BorderRadius.circular(8),
+                  ),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(8),
+                    borderSide: BorderSide(color: Colors.white),
+                  ),
+                  fillColor: Color(0xffF3F1F5),
+                  filled: true,
+                  hintText: "Masukkan Ulasan disini",
+                ),
+              ),
+            ),
+            Container(
               margin: const EdgeInsets.only(top: 10),
               width: lebar * 0.9,
-              height: tinggi * 0.2,
+              // height: tinggi * 0.2,
               color: Color(0xffF3F1F5),
               child: image == null ? SizedBox() : Image.file(image!),
             ),
@@ -46,7 +65,7 @@ class _UlasanState extends State<Ulasan> {
               width: lebar * 0.5,
               child: TextButton(
                   style: TextButton.styleFrom(
-                    backgroundColor: const Color(0xFFECC80A),
+                    backgroundColor: const Color(0xffF3F1F5),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5),
                     ),
@@ -61,9 +80,31 @@ class _UlasanState extends State<Ulasan> {
                         fontFamily: "Poppins",
                         fontWeight: FontWeight.bold,
                         fontSize: 16,
-                        color: Colors.white),
+                        color: Color.fromARGB(255, 32, 32, 32)),
                   )),
             ),
+            Container(
+              margin: const EdgeInsets.only(top: 5),
+              width: lebar * 0.5,
+              child: TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: const Color(0xFFECC80A),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                ),
+                onPressed: () {},
+                child: const Text(
+                  "tambah ulasan",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      fontFamily: "Poppins",
+                      fontWeight: FontWeight.bold,
+                      fontSize: 16,
+                      color: Colors.white),
+                ),
+              ),
+            )
           ],
         ),
       ),

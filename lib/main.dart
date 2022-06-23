@@ -2,6 +2,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:nyoba/login1.dart';
 import 'package:nyoba/profile.dart';
+import 'package:nyoba/ulasan.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
