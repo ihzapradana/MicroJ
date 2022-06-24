@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:getwidget/getwidget.dart';
 import 'package:nyoba/category.dart';
+import 'package:nyoba/kategori_statis.dart';
 import 'package:nyoba/mirun.dart';
 import 'package:nyoba/ulasan.dart';
 
@@ -66,7 +67,7 @@ class _homeState extends State<home> {
                             Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                    builder: (context) => Ulasan()));
+                                    builder: (context) => Kategori()));
                           },
                           child: Column(
                             children: [

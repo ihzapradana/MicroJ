@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nyoba/ulasan.dart';
 
 class keranjang extends StatefulWidget {
   const keranjang({Key? key}) : super(key: key);
@@ -128,7 +129,12 @@ class _keranjangState extends State<keranjang> {
                         Container(
                             margin: EdgeInsets.only(top: 35),
                             child: ElevatedButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => Ulasan()));
+                                },
                                 child: Text("Checkout"),
                                 style: ElevatedButton.styleFrom(
                                     shape: RoundedRectangleBorder(
